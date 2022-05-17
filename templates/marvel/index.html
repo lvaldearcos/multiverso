@@ -19,17 +19,20 @@
     </header>
 
     <div class="container">
-        <div class="container-izquierda">
+
             {% for personaje in personajes %}
-
-                <img src="{{ personaje.img }}" alt="">
-                <p>{{ personaje.nombre }}</p>
-                <p>{{ personaje.poderes }}</p>
-                <p>{{ personaje.origen }}</p>
-
+                <div class="container-izquierda">
+                    <img src="{{ personaje.img }}" alt="">
+                    <div class="container-pleft">
+                        <p>{{ personaje.nombre }}</p>
+                        <p>Poderes: {{ personaje.poderes }}</p>
+                        <p>Lugar de origen: {{ personaje.origen }}</p>
+                    </div>
+                    <a href="/actualizar/{{ personaje.id }}">Modificar</a>
+                    <a href="/eliminar/{{ personaje.id }}">Eliminar</a>
+                </div>
 
             {% endfor %}
-        </div>
 
 
     </div>

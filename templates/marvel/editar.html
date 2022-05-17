@@ -3,8 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Marvel</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+
 </head>
 <body>
+    <header>
+        <a class="p2" href="/{{ index }}">Ir  a  Inicio</a>
+        <p class="p2">Contactanos</p>
+        <p class="p1">Marvel</p>
+        <p class="p2">Personajes</p>
+        <a class="p2" href="/crear_pagina">Crear presonaje</a>
+    </header>
 
+    <div class="container">
+        <div class="container-izquierda">
+            <img src="{{ personaje.img }}" alt="">
+            <div class="container-pleft">
+                <p>{{ personaje.nombre }}</p>
+                <p>Poderes: {{ personaje.poderes }}</p>
+                <p>Lugar de origen: {{ personaje.origen }}</p>
+            </div>
+        </div>
+
+        <div class="container-derecha">
+            <form class="formindex" action="/actualizar/{{ personaje.id }}" method="post">
+
+                {% csrf_token %}
+
+                <label for="id">ID:</label>
+                <input type="number" id="id" disabled name="id" value="{{ personaje.id }}">
+
+                <label for="img">URL imagen:</label>
+                <input type="url" id="img" name="img" value="{{ personaje.img }}">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="{{ personaje.nombre }}">
+
+                <label for="poderes">Poderes:</label>
+                <input type="text" id="poderes" name="poderes" value="{{ personaje.poderes }}">
+
+                <label for="origen">Origen:</label>
+                <input type="text" id="origen" name="origen" value="{{ personaje.origen }}">
+
+                <input class="boton" type="submit" value="Actualizar">
+
+            </form>
+        </div>
+    </div>
 </body>
 </html>

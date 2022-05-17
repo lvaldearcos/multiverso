@@ -33,13 +33,12 @@ header{
 .container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: max-content;
+    justify-content: center;
 }
 
-.container-izquierda{
-    margin: auto;
-    width: 60%;
-}
+
 
 .container-derecha{
     margin: auto;
@@ -75,4 +74,34 @@ header{
     width: 30%;
     margin: 5% auto;
     background-color: rgba(255, 255, 255, 0.72);
+}
+
+.container-izquierda{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3%;
+    width: 13%;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: Arial, serif;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.container-izquierda img{
+    width: 150px;
+    margin: auto;
+}
+
+.container-izquierda a{
+    margin: auto;
+    color: red;
+    text-decoration: none;
+
+}
+
+.container-pleft{
+    width: 79%;
+
 }
