@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(to bottom, red, #230000);
+    background-attachment: fixed;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    height: 100px;
+}
+
+.p1{
+    color: white;
+    font-family: "Arial Black", serif;
+    font-size: 40px;
+    margin: auto;
+}
+.p2{
+    font-family: Arial, serif;
+    font-size: 15px;
+    height: fit-content;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+}
+
+.container-izquierda{
+    margin: auto;
+    width: 60%;
+}
+
+.container-derecha{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 30%;
+}
+
+.formindex{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin: 10% 10%;
+    font-family: Arial, serif;
+}
+
+.formindex * {
+    font-size: 15px;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.72);
+    color: black;
+
+}
+.formindex label{
+    margin-top: 7%;
+    background-color: transparent;
+    color: white;
+}
+.formindex input{
+    padding: 8px;
+}
+
+.boton{
+    width: 30%;
+    margin: 5% auto;
+    background-color: rgba(255, 255, 255, 0.72);
+}

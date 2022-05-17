@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Marvel</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+
 </head>
 <body>
+    <header>
+        <a class="p2" href="/{{ index }}">Ir  a  Inicio</a>
+        <p class="p2">Contactanos</p>
+        <p class="p1">Marvel</p>
+        <p class="p2">Personajes</p>
+        <a class="p2" href="/crear_pagina">Crear presonaje</a>
+    </header>
+
+    <div class="container">
+        <div class="container-izquierda">
+            {% for personaje in personajes %}
+
+                <img src="{{ personaje.img }}" alt="">
+                <p>{{ personaje.nombre }}</p>
+                <p>{{ personaje.poderes }}</p>
+                <p>{{ personaje.origen }}</p>
+
+
+            {% endfor %}
+        </div>
+
+
+    </div>
 
 </body>
-</html>
