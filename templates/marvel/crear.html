@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+
+</head>
+<body>
+    <header>
+        <a class="p2" href="/{{ index }}">Ir  a  Inicio</a>
+        <p class="p2">Contactanos</p>
+        <p class="p1">Marvel</p>
+        <p class="p2">Personajes</p>
+        <a class="p2" href="/crear_pagina">Crear presonaje</a>
+    </header>
+
+    <div class="container-derecha">
+            <form class="formindex" action="/crear" method="post">
+
+                {% csrf_token %}
+
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" value="">
+
+                <label for="img">URL imagen:</label>
+                <input type="url" id="img" name="img" value="">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="">
+
+                <label for="poderes">Poderes:</label>
+                <input type="text" id="poderes" name="poderes" value="">
+
+                <label for="origen">Origen:</label>
+                <input type="text" id="origen" name="origen" value="">
+
+                <input class="boton" type="submit" value="Crear">
+
+            </form>
+        </div>
+
+
+</body>
+</html>
